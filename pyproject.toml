@@ -7,7 +7,7 @@ name = "gh-release-devpi"
 version = "0.1.1"
 description = "GitHub Release Artifact Downloader and DevPI Uploader"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.11"
 dependencies = [
     "pygithub>=2.1.1",
     "python-dotenv>=1.0.0",
@@ -19,3 +19,11 @@ dependencies = [
 
 [project.scripts]
 gh-release-devpi = "gh_release_devpi.main:app"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "v$version"
+version_scheme = "pep440"
+version_provider = "uv"
+update_changelog_on_bump = false
+major_version_zero = true
