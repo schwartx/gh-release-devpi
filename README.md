@@ -44,6 +44,29 @@ gh-release-devpi download \
   --devpi-password xxx
 ```
 
+### 独立上传命令
+
+将本地目录中的 Python 包上传到 DevPI：
+
+```bash
+# 设置环境变量
+export DEVPI_SERVER="http://devpi.example.com"
+export DEVPI_PASSWORD="your_password"
+
+# 使用默认目录 ./artifacts
+gh-release-devpi upload
+
+# 指定目录
+gh-release-devpi upload ./dist
+```
+
+上传命令环境变量：
+- `DEVPI_SERVER`: DevPI 服务器地址 (必需)
+- `DEVPI_PASSWORD`: DevPI 密码 (必需)
+- `DEVPI_USER`: DevPI 用户名 (默认: root)
+- `DEVPI_INDEX`: DevPI 索引名称 (默认: dev)
+- `DEVPI_USE_PROXY`: 是否使用代理 (默认: false)
+
 ### 参数
 
 - `--repo`, `-r`: GitHub 仓库 (格式: `owner/repo`)
