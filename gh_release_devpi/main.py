@@ -440,11 +440,11 @@ def upload(
         raise typer.Exit(code=1)
 
     devpi_password = os.getenv("DEVPI_PASSWORD")
-    if not devpi_password:
-        console.print("[red]错误: 请设置环境变量 DEVPI_PASSWORD[/red]")
-        console.print('[yellow]示例: export DEVPI_PASSWORD="your_password"[/yellow]')
-        raise typer.Exit(code=1)
-
+    # if not devpi_password:
+    #     console.print("[red]错误: 请设置环境变量 DEVPI_PASSWORD[/red]")
+    #     console.print('[yellow]示例: export DEVPI_PASSWORD="your_password"[/yellow]')
+    #     raise typer.Exit(code=1)
+    #
     # 3. 获取可选环境变量
     devpi_user = os.getenv("DEVPI_USER", "root")
     devpi_index = os.getenv("DEVPI_INDEX", "dev")
